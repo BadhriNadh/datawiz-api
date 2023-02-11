@@ -14,12 +14,4 @@ public class DatawizApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DatawizApplication.class, args);
 	}
-
-//	@Bean
-//	CommandLineRunner commandLineRunner (UserRepository userRepository, PasswordEncoder passwordEncoder) {
-//		return args -> {
-//			userRepository.save(new User("userN", passwordEncoder.encode("1234")));
-//		};
-//	}
-
 }
