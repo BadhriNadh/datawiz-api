@@ -2,6 +2,8 @@ package com.groupten.datawiz.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 
 @Entity
 @Table(name = "user")
@@ -10,42 +12,41 @@ public class User {
     @Id
     @Column(name = "user_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long userId;
+    private int userId;
 
     private String username;
 
     private String password;
 
-    @Column(name = "user")
-    private String profileName;
+    private String name;
 
     public User() {}
 
-    public User(String profileName, String username) {
-        this.profileName = profileName;
+    public User(String name, String username) {
+        this.name = name;
         this.username = username;
     }
 
-    public User(String profileName, String username, String password) {
-        this.profileName = profileName;
+    public User(String name, String username, String password) {
+        this.name = name;
         this.username = username;
         this.password = password;
     }
 
-    public long getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(long userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
-    public String getProfileName() {
-        return profileName;
+    public String getName() {
+        return name;
     }
 
-    public void setProfileName(String profileName) {
-        this.profileName = profileName;
+    public void setName(String profileName) {
+        this.name = profileName;
     }
 
     public String getUsername() {

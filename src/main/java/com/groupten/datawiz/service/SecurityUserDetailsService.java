@@ -1,6 +1,6 @@
 package com.groupten.datawiz.service;
 
-import com.groupten.datawiz.model.SecurityUser;
+import com.groupten.datawiz.config.SecurityUser;
 import com.groupten.datawiz.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

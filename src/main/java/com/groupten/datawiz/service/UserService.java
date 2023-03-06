@@ -8,4 +8,6 @@ public interface UserService {
     User saveUser(User user);
 
     String generateToken(Authentication authentication);
+
+    int getUserId(String userName);
 }
