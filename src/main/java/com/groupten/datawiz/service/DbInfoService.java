@@ -1,16 +1,17 @@
 package com.groupten.datawiz.service;
 
-import com.groupten.datawiz.model.DbConn;
-import com.groupten.datawiz.model.UserDbInfo;
+import com.groupten.datawiz.protocol.DbInfoRequest;
 
 import java.util.List;
 
 
 public interface DbInfoService {
 
-    List<String> getDatabases(UserDbInfo conn);
-    List<String> getTables(UserDbInfo conn);
-    List<String> getColumns(UserDbInfo conn);
+    List<String> getDatabases(DbInfoRequest conn);
+    List<String> getTables(DbInfoRequest conn);
+    List<String> getColumns(DbInfoRequest conn);
+    List<String> getIntegerColumns(DbInfoRequest conn);
+
 
 
 }

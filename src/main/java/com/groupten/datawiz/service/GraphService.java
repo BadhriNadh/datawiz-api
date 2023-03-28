@@ -6,5 +6,5 @@ import com.groupten.datawiz.protocol.GraphResponse;
 import java.util.List;
 
 public interface GraphService {
-    GraphResponse getValues(GraphRequest graphRequest);
+    GraphResponse getGraphValues(GraphRequest graphRequest);
 }

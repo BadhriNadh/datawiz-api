@@ -2,10 +2,31 @@ package com.groupten.datawiz.protocol;
 
 public class GraphRequest {
 
-    private String tableName;
+    private String schemaName;
+    private String tableNameOne;
+    private String tableNameTwo;
     private String xColumn;
     private String yColumn;
+    private String calculation;
     private int connectionId;
+
+    public GraphRequest(String schemaName, String tableNameOne, String tableNameTwo, String xColumn, String yColumn, String calculation, int connectionId) {
+        this.schemaName = schemaName;
+        this.tableNameOne = tableNameOne;
+        this.tableNameTwo = tableNameTwo;
+        this.xColumn = xColumn;
+        this.yColumn = yColumn;
+        this.calculation = calculation;
+        this.connectionId = connectionId;
+    }
+
+    public String getSchemaName() {
+        return schemaName;
+    }
+
+    public void setSchemaName(String schemaName) {
+        this.schemaName = schemaName;
+    }
 
     public int getConnectionId() {
         return connectionId;
@@ -15,12 +36,12 @@ public class GraphRequest {
         this.connectionId = connectionId;
     }
 
-    public String getTableName() {
-        return tableName;
+    public String getTableNameOne() {
+        return tableNameOne;
     }
 
-    public void setTableName(String tableName) {
-        this.tableName = tableName;
+    public void setTableNameOne(String tableNameOne) {
+        this.tableNameOne = tableNameOne;
     }
 
     public String getxColumn() {
@@ -37,5 +58,20 @@ public class GraphRequest {
 
     public void setyColumn(String yColumn) {
         this.yColumn = yColumn;
+    }
+    public String getTableNameTwo() {
+        return tableNameTwo;
+    }
+
+    public void setTableNameTwo(String tableNameTwo) {
+        this.tableNameTwo = tableNameTwo;
+    }
+
+    public String getCalculation() {
+        return calculation;
+    }
+
+    public void setCalculation(String calculation) {
+        this.calculation = calculation;
     }
 }

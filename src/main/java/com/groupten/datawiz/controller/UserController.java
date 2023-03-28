@@ -24,7 +24,7 @@ public class UserController extends Handler{
 
     @PostMapping("/save")
     public ResponseEntity<Response> saveUser(@RequestBody User user) {
-        Response response = new Response(userService.saveUser(user),HttpStatus.ACCEPTED.value(), HttpStatus.ACCEPTED.name());
+        Response response = new Response(userService.saveUser(user).getUserId(),HttpStatus.ACCEPTED.value(), HttpStatus.ACCEPTED.name());
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(response);
     }
 

@@ -17,13 +17,13 @@ public class ConnectionController extends Handler{
 
     @PostMapping("/save")
     public ResponseEntity<Response> saveConn(@RequestBody DbConn dbConn) {
-        Response response = new Response(dbConnService.saveConn(dbConn),HttpStatus.CREATED.value(), HttpStatus.CREATED.name());
+        Response response = new Response(dbConnService.saveConn(dbConn).getId(),HttpStatus.CREATED.value(), HttpStatus.CREATED.name());
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @PostMapping("/edit")
     public ResponseEntity<Response> editConn(@RequestBody DbConn dbConn) {
-        Response response = new Response(dbConnService.editConn(dbConn),HttpStatus.CREATED.value(), HttpStatus.CREATED.name());
+        Response response = new Response(dbConnService.editConn(dbConn).getId(),HttpStatus.CREATED.value(), HttpStatus.CREATED.name());
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
@@ -33,8 +33,8 @@ public class ConnectionController extends Handler{
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
-    @GetMapping("/getAll/{user_id}")
-    public ResponseEntity<Response> getAllConnByUserId(@PathVariable("user_id") int user_id){
+    @GetMapping("/getAll/{userid}")
+    public ResponseEntity<Response> getAllConnByUserId(@PathVariable("userid") int user_id){
         Response response = new Response(dbConnService.getAllConnByUserId(user_id),HttpStatus.OK.value(), HttpStatus.OK.name());
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }

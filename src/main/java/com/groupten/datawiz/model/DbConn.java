@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 @Entity
-@Table(name="connections")
+    @Table(name="connections")
 public class DbConn {
     @Id
     @Column(name = "connection_id")

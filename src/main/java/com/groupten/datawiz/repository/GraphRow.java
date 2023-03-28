@@ -1,6 +1,6 @@
-package com.groupten.datawiz.model;
+package com.groupten.datawiz.repository;
 
-public class Graph {
+public class GraphRow {
 
     private Object x;
     private Object y;

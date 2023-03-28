@@ -1,15 +1,27 @@
 package com.groupten.datawiz.protocol;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 public class Response {
 
     private Object data;
     private int status;
     private String message;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private Integer totalPages;
+
     public Response(Object data, int status, String message) {
         this.data = data;
         this.status = status;
         this.message = message;
+    }
+
+    public Response(Object data, int status, String message, Integer totalPages) {
+        this.data = data;
+        this.status = status;
+        this.message = message;
+        this.totalPages = totalPages;
     }
 
     public Object getData() {
@@ -34,5 +46,13 @@ public class Response {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public Integer getTotalPages() {
+        return totalPages;
+    }
+
+    public void setTotalPages(Integer totalPages) {
+        this.totalPages = totalPages;
     }
 }

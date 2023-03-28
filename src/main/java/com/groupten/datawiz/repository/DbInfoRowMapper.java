@@ -3,6 +3,7 @@ package com.groupten.datawiz.repository;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
 public class DbInfoRowMapper implements RowMapper<String> {
@@ -12,6 +13,6 @@ public class DbInfoRowMapper implements RowMapper<String> {
 
         String row = rs.getString(1);
 
-        return row;
+            return row;
     }
 }
