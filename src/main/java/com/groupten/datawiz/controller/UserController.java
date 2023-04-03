@@ -10,7 +10,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping(value = "/user", method = { RequestMethod.GET, RequestMethod.POST })
 public class UserController /*extends Handler*/{
 
     @Autowired
