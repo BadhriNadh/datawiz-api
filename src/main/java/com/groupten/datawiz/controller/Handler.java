@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.util.List;
 
-@ControllerAdvice
-@Order(Ordered.HIGHEST_PRECEDENCE)
+//@ControllerAdvice
+//@Order(Ordered.HIGHEST_PRECEDENCE)
 public class Handler {
 
     @ExceptionHandler(Exception.class)
