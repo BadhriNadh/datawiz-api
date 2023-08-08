@@ -60,6 +60,9 @@ should install and configure the dependencies, which include the following libra
 <u>Note that this project's back-end uses Java Version 17. </u>
 
 <h3> Back-End Build Instructions/Commands:</h3>
+<ul>
+<li>mvn build </li>
+</ul>
 
 <h3>Front-End Dependencies:</h3>
 <ul>
