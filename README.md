@@ -1,4 +1,7 @@
-# Datawiz
+# DataWiz
+
+[DataWiz-UI Repository](https://github.com/BadhriNadh/datawiz-ui)
+
 <h3> Project's User Scenarios:</h3>
 <i>The following showcases the general workflows the user performs using our application:</i>
 <ul>
